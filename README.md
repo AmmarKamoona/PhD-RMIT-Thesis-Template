@@ -3,6 +3,7 @@
 The class has been modified from other university to RMIT.
 The class has been created by --Ammar Kamoona--
 
+
 [*Sample of the first page*]
 
 <p align="center">
