@@ -4,5 +4,5 @@ The class has been created by Ammar Kamoona
 
 
 <p align="center">
-<img src="https://github.com/AmmarKamoona/Multiple-Instance-Based-Video-Anomaly-Detection-Using-Deep-Temporal-Encoding-Decoding/blob/main/images/AUC_UCF.PNG" width="650">
+<img src="https://github.com/AmmarKamoona/PhD-RMIT-Thesis-Template/blob/main/PhDRMIT_sample.pdf" width="650">
 </p>
