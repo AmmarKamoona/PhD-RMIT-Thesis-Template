@@ -1,0 +1,124 @@
+\documentclass{class/kamoonaRmit}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{subcaption} % For complex figures
+\usepackage[titletoc, header, page]{appendix}
+\usepackage{graphicx}
+%\usepackage{hyperref}
+%\usepackage{pdfpages}   %To attach PDF in the appendices
+
+\usepackage{array}      % For fancy tables
+\usepackage{booktabs}   % For formal tables
+\usepackage{longtable}  % For long tables
+\usepackage{lipsum}
+\usepackage{siunitx}    % International System of Units
+
+\usepackage{datetime}   % To manage date format
+\usepackage[pdfusetitle]{hyperref}
+
+\usepackage{setspace}   % To configure dobule/single space
+
+%\usepackage{class/gantt}  % Uncomment if gantt chart is needed 
+
+%\geometry{showframe}
+\author{Ammar Mansoor Kamoona 
+%    \\ 	{\normalsize \href{ammmar:@rmit.edu.au}{\texttt{fmarti@rmit.edu.au}}}
+%	\and
+%	Camilla Lekebjer \\
+%    {\normalsize \href{mailto:Camilla.Lekebjer@cs.lth.se}{\texttt{Camilla.Lekebjer@cs.lth.se}}}
+}
+\title{PhD Thesis template in LaTeX}
+\subtitle{The unofficial RMIT University of Technology Thesis template}
+\subtitle{A thesis submitted in fulfilment of the requirements for the degree of Doctor of Philosophy}
+
+%% AFILIATIONS
+%% You can choose between one or two affiliations, if you don't fill in
+%% any of those commands, Swinburne Vertical logo will appear by default.
+%% If you only have one affiliation, use the following commands:
+
+\affiliation{School of Electrical and Computer Engineering\\ \\College of Science, Engineering and Health\\Royal Melbourne Institute of Technology}
+\affilogo{class/logos/RMIT_Logo}
+%% If you have two affiliations, use the following fields:
+%two affiliations
+%\affiliations{Royal Melbourne Institute of Technology}{MIT}
+%\affilogos{class/logos/RMIT_Logo}{class/logos/RMIT_Logo}
+
+%% Document, is this your Doctoral Thesis, or your Confirmation of Candidature?
+\TypeOfDocument{Doctoral Thesis}
+%\TypeOfDocument{Confirmation of Candidature}
+
+%% Place where you submit and/or present the thesis
+%\location{Barcelona, Catalunya}
+%\location{Lund, Sweden}
+\location{Melbourne, Australia}
+
+%% Date without the day of the month
+%\newdateformat{mydate}{\monthname[\THEMONTH] \THEYEAR}
+%\date{\mydate\today}
+%\date{January 2015}
+
+
+
+\begin{document}
+
+    %% This command generates all the pages before Chapter 1
+    %% Cover, Abstract, Acknowledgements, Declaration, Contents
+    \makefrontmatter
+	%% If list of figures and/or list of tables is needed, UNCOMENT the following lines
+	%\listoffigures
+	%\listoftables
+
+    %% Contents are still in roman numbers, don't touch this
+    \cleardoublepage
+
+    %% Arabic numbers from Chapter 1 to the end.
+    \pagenumbering{arabic}
+
+    %% Double or One-half space. 
+    %%
+    %% My supervisors want read the thesis in double space to make comments.
+    %% One-and-a-half line spacing should be used for the body of the work; 
+    %% single spacing may be used for indented quotations and in appendices, reference lists, and footnotes
+    %% 
+    %%
+    %% `make' to compile the document in one half spacing
+    %% `make draft' to compile it in double space
+    \ifdefined\isdraft
+        \doublespacing
+    \else
+        \onehalfspacing
+    \fi
+
+    %% Chapters. Include here all your chapters
+    \include{Chapters/chapter1}
+
+    \include{Chapters/chapter2}
+
+    \include{Chapters/chapter3}
+
+
+
+    %% Bibliography using bibtex
+    \makebibliography{BibPhDThesis}
+
+    
+    %% Appendices. If you don't have any appendices, comment the appendices section
+    %\begin{appendices}
+
+        %% Include here all your appendices
+       % \include{Appendices/appendixA}
+
+        %\include{Appendices/appendixB}
+
+        % If you want to add a pdf already generated in the appendix, use the following command
+        %\includepdf[pages={1}]{papers/popsci.pdf}
+
+    %\end{appendices}
+
+\end{document}
