@@ -7,9 +7,8 @@
 %
 % 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{kamoonaRmit}
-		[2021/01/16 v0.1 
-		PhD Thesis Class,Faculty of Engineering, Royal Melbourne Institute of Technology]
+\ProvidesClass{kamoonaRmit}[2021/01/16 v0.1 
+		PhD Thesis Class, Faculty of Engineering, Royal Melbourne Institute of Technology]
 
 %\ExecuteOptions{12pt,a4paper,onecolumn, twoside, openright}
 %\ProcessOptions\relax
@@ -86,72 +85,15 @@
 	\location{}
 	\subtitle{}
 	\thesisDec{}
-	
-\TypeOfDocument{}
+    \TypeOfDocument{}
 	% COVER PAGE for the title page
-	\pretitle{\vspace{-5cm}\begin{center}\includegraphics[scale=0.6,keepaspectratio]{\@affilogo}
-	\noindent\begin{center}\Huge
-	    
-	}
-	%\pretitle{\noindent\rule{\linewidth}{1pt}\begin{center}\Huge}
+	\pretitle{\vspace{-5cm}\begin{center}\includegraphics[scale=0.6,keepaspectratio]{\@affilogo}\noindent\end{center}\begin{center} \Huge}
 	\posttitle{\par \vskip 0.5em \ifx \@subtitle \empty \vskip 1em \else {\Large\@subtitle} \fi \end{center}\noindent\vskip 0.5em}
-	\preauthor{\begin{center}\large \lineskip 0.5em%
-	\begin{tabular}[t]{c}}
-\postauthor{\end{tabular} \vskip 2em \@affiliation \par\end{center}}
-	\predate{
-	%	\ifx\@affiliation\empty
-	%		\ifx\@firstaffiliation\empty
-	%	 		\ClassWarning{kamoonaRmit}{Affiliation missing. Defaulting to RMIT.}
-				%\includegraphics[width=3cm,height=7cm,keepaspectratio]{logos/RMIT_Logo}
-				%\vfill
-%			 	Royal Melbourne Institute of Technology
-%			\else 
-			%	\includegraphics[width=5cm,height=3cm,keepaspectratio]{\@firstaffilogo} 
-				\hfill 
-				%\includegraphics[width=5cm,height=3cm,keepaspectratio]{\@secondaffilogo}
-%				\vfill
-%				\Large \@firstaffiliation \vskip 0.1em \normalsize and \vskip 0.1em \Large \@secondaffiliation 
-%			\fi
-%		\else 
-			%includegraphics[width=6cm,height=3cm,keepaspectratio]{\@affilogo}
-%			\vfill
-%			\@affiliation 
-%		\fi 
-
-	\vskip 2em
-	\large \@TypeOfDocument \\ 
-    \large \@location
-    \vfill
-	}
-	%\predate{\vskip 5em \begin{center}\Large}
-	\postdate{\vskip 5em \end{center} \vskip 5em   \begin{center}\Large}
-%    \postdate{\par\vfill 
-%		\ifx\@affiliation\empty
-%			\ifx\@firstaffiliation\empty
-%		 		\ClassWarning{kamoonaRmit}{Affiliation missing. Defaulting to RMIT.}
-%				\includegraphics[width=3cm,height=7cm,keepaspectratio]{logos/RMIT_Logo}
-%				\vfill
-%			 	Royal Melbourne Institute of Technology
-%			\else 
-			%	\includegraphics[width=5cm,height=3cm,keepaspectratio]{\@firstaffilogo} 
-%				\hfill 
-				%\includegraphics[width=5cm,height=3cm,keepaspectratio]{\@secondaffilogo}
-%				\vfill
-%				\Large \@firstaffiliation \vskip 0.1em \normalsize and \vskip 0.1em \Large \@secondaffiliation 
-%			\fi
-%		\else 
-			%includegraphics[width=6cm,height=3cm,keepaspectratio]{\@affilogo}
-%			\vfill
-%			\@affiliation 
-%		\fi 
-
-%	\vskip 2em
-%	\large \@TypeOfDocument \\ 
-%    \large \@location
-%	\end{center}
-%        }
-
-
+	\preauthor{\begin{center}\large \lineskip 0.5em \begin{tabular}[t]{c}}
+    \postauthor{\end{tabular} \vskip 2em \@affiliation \\ Royal Melbourne Institute of Technology \par \end{center}}
+	\predate{\vskip 2em \large \begin{center} \@TypeOfDocument \\ 
+    \large \@location \vfill}
+	\postdate{\vskip 5em \vskip 5em   \Large \end{center}}
 \makeatother
 
 
@@ -265,3 +207,4 @@
 	\bibliographystyle{plain}
 	\bibliography{#1}
 }
+\makeatother
